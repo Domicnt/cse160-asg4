@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 4</title>
+  </head>
+
+  <body onload="main()">
+    <p>Dominic Bertocchini<br>
+      dbertocc@ucsc.edu<br><br>
+      Notes to the grader:<br>
+      WASD and QE for camera movement, or left click and drag with mouse<br>
+      hold space to ascend and Z to descend<br>
+      the spotlight acts as a flashlight
+    </p>
+    <div style="position: relative;">
+      <canvas id="canvas" width="1280" height="720" style="display: block; width: 75vw; height: 42vw;" oncontextmenu="return false;">
+        Please use a browser that supports "canvas"
+      </canvas>
+      <div id="overlay" style="color:white; position: absolute; left: 10px; top: 10px;">
+        <div>Framerate: <span id="display"></span></div>
+      </div>
+      <div style="position: absolute; right: 10px; top: 10px; width: 20vw;">
+        <button type="button" id="NormalVis">Normal Visualization Toggle</button>
+        <br>
+        <button type="button" id="SpotlightToggle">Spotlight Toggle</button>
+        <br>
+        <button type="button" id="LightingToggle">Lighting Toggle</button>
+        <br>
+        Lighting Color:<br>
+        R:<input type="range" min="0" max="100" value="100" id="LightRed"><br>
+        G:<input type="range" min="0" max="100" value="100" id="LightGreen"><br>
+        B:<input type="range" min="0" max="100" value="100" id="LightBlue"><br>
+        <button type="button" id="LightMoveToggle">Light Movement Toggle</button>
+        <br>
+        Lighting Position: (Light movement must be off)<br>
+        X:<input type="range" min="-25" max="25" value="5" id="LightX"><br>
+        Y:<input type="range" min="-25" max="25" value="5" id="LightY"><br>
+        Z:<input type="range" min="-25" max="25" value="10" id="LightZ"><br>
+      </div>
+    </div>
+    
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="utils.js"></script>
+    <script src="asg4.js"></script>
+  </body>
+</html>
